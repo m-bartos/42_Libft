@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:11:59 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/23 16:18:28 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/24 10:48:26 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,20 +33,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-	int test;
-	int real_test;
-	char *str1 = "ahoj1";
-	char *str2 = "ahoj";
-	int n_char = 10;
-
-	test = ft_strncmp(str1, str2, n_char);
-	real_test = ft_strncmp(str1, str2, n_char);
-	printf("%d \n %d \n", test, real_test);
-	return (0);
-}
-*/

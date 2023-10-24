@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:19:43 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/23 16:29:42 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/24 10:48:30 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,18 +55,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-/*
-#include<stdio.h>
-int	main(void)
-{
-	char	test[] = "hihahihahahia";
-	char	to_find_str[] = "hahaha";
-	char	*new_string;
-	int		max = 4;
-
-	new_string = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
-	printf("%s", new_string);
-	return (0);
-}
-*/
