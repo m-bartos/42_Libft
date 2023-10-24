@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:18:01 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/23 13:38:03 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/24 10:42:14 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	char	str[] = "ahoj ahoj ahoj";
-	char	*new_str;
-
-	new_str = ft_memchr(str, 'h', 2);
-	printf("Original:%s\n", str);
-	printf("Found ft_memchr:%s\n", new_str);
-	new_str = memchr(str, 'h', 2);
-	printf("Found memchr:%s\n", new_str);
-	return (0);
-}
-*/
