@@ -1,6 +1,16 @@
-/* header */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/23 13:19:43 by mbartos           #+#    #+#             */
+/*   Updated: 2023/10/23 16:29:42 by mbartos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_is_str_in_str(char *str, char *to_find, size_t len)
 {
@@ -14,7 +24,10 @@ int	ft_is_str_in_str(char *str, char *to_find, size_t len)
 		else
 			return (0);
 	}
-	return (1);
+	if (i == len)
+		return (0);
+	else
+		return (1);
 }
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -24,12 +37,12 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	char	*str;
 	char	*to_find;
 
-	str = (char*) big;
-	to_find = (char*) little;
+	str = (char *) big;
+	to_find = (char *) little;
 	i = 0;
 	if (to_find[0] == 0)
 		return (str);
-	while (str[i] != 0)
+	while (str[i] != 0 && len > 0)
 	{
 		if (str[i] == to_find[0])
 		{
@@ -38,6 +51,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				return (&str[i]);
 		}
 		i++;
+		len--;
 	}
 	return (0);
 }
@@ -51,7 +65,7 @@ int	main(void)
 	char	*new_string;
 	int		max = 4;
 
-	new_string = ft_strnstr(test, to_find_str, max);
+	new_string = ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15);
 	printf("%s", new_string);
 	return (0);
 }

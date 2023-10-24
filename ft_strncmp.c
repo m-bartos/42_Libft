@@ -6,25 +6,29 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 15:11:59 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/17 16:00:53 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/23 16:18:28 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
+	str1 = (unsigned char *) s1;
+	str2 = (unsigned char *) s2;
 	i = 0;
-	while ((*s1 != 0 || *s2 != 0) && i < n)
+	while ((*str1 != 0 || *str2 != 0) && i < n)
 	{
-		if (*s1 < *s2)
+		if (*str1 < *str2)
 			return (-1);
-		else if (*s1 > *s2)
+		else if (*str1 > *str2)
 			return (1);
-		s1++;
-		s2++;
+		str1++;
+		str2++;
 		i++;
 	}
 	return (0);
