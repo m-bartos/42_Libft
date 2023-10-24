@@ -1,2 +1,2 @@
-# 42cursus
-Core curriculum at 42Prague.
+# 42_Libft
+First project at 42 Prague.
