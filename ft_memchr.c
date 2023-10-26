@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:18:01 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/26 15:51:12 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/26 16:12:29 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char	*str;
 
 	str = (char *)s;
-	c = c % 128;
+	c = c % 256;
 	i = 0;
 	while (i < n)
 	{
