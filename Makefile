@@ -25,6 +25,7 @@ bonus: $(MY_BONUS_OBJECTS)
 
 clean:
 	rm -f $(MY_OBJECTS)
+	rm -f $(MY_BONUS_OBJECTS)
 
 fclean: clean
 	rm -f $(LIB_NAME)
