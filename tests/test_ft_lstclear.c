@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 14:16:18 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/26 14:26:55 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/27 14:34:46 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(void)
 	first = C;
 	ft_lstadd_front(&first, B);
 	ft_lstadd_front(&first, A);
-
+	printf("%p\n%p\n%p\n", A->next, B->next, C->next);
 	ft_lstclear(&B, &ft_testdel);
 	//printf("%p\n%p\n%p\n", A->next, B->next, C->next);
 	return (0);
