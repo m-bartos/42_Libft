@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 11:52:38 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/24 13:30:33 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/27 12:56:37 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	sub_str_first = sub_str;
 	i = 0;
-	while (i < len)
+	while (i < len && *(s + start + i))
 	{
 		*sub_str++ = *(s + start + i);
 		i++;
