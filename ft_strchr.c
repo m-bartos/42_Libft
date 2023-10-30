@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:19:36 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/26 16:12:36 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/30 14:42:16 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@ char	*ft_strchr(const char *s, int c)
 
 	str = (char *) s;
 	i = 0;
-	c = c % 256;
 	while (str[i])
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char) c)
 			return (&str[i]);
 		i++;
 	}
-	if (c == '\0')
+	if ((unsigned char) c == '\0')
 		return (&str[i]);
 	return (0);
 }
