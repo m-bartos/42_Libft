@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 13:45:17 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/25 14:45:44 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/30 11:49:27 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (is_inside(s1[s_length - 1], set))
 		s_length--;
 	start = 0;
-	while (is_inside(s1[start], set))
+	while (is_inside(s1[start], set) && s_length > 0)
 	{
 		s_length--;
 		start++;
