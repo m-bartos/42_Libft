@@ -1,4 +1,4 @@
-LIB_NAME = libft.a
+NAME = libft.a
 
 CC = cc
 
@@ -12,22 +12,22 @@ MY_OBJECTS = $(SOURCES:.c=.o)
 
 MY_BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
-all:	$(LIB_NAME)
+all:	$(NAME)
 	
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(LIB_NAME): $(MY_OBJECTS)
-	ar rcs $(LIB_NAME) $(MY_OBJECTS)
+$(NAME): $(MY_OBJECTS)
+	ar rcs $(NAME) $(MY_OBJECTS)
 
 bonus: $(MY_BONUS_OBJECTS)
-	ar rcs $(LIB_NAME) $(MY_BONUS_OBJECTS)
+	ar rcs $(NAME) $(MY_BONUS_OBJECTS)
 
 clean:
 	rm -f $(MY_OBJECTS)
 	rm -f $(MY_BONUS_OBJECTS)
 
 fclean: clean
-	rm -f $(LIB_NAME)
+	rm -f $(NAME)
 
 re: fclean all
