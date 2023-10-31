@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 13:18:08 by mbartos           #+#    #+#             */
-/*   Updated: 2023/10/26 16:10:54 by mbartos          ###   ########.fr       */
+/*   Updated: 2023/10/31 08:36:37 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	while (i < n)
 	{
 		if (*str1 != *str2)
-			return (*str1 - *str2);
+			return ((int)(*str1 - *str2));
 		str1++;
 		str2++;
 		i++;
