@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_c.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 10:36:09 by mbartos           #+#    #+#             */
-/*   Updated: 2024/06/17 10:24:19 by mbartos          ###   ########.fr       */
+/*   Created: 2023/10/25 11:15:33 by mbartos           #+#    #+#             */
+/*   Updated: 2023/11/01 12:45:28 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putstr_c(char *s, int *ptr_sum)
 {
-	int	i;
-
-	i = 0;
 	if (s == NULL)
-		return (0);
-	while (s[i] != 0)
-		i++;
-	return (i);
+	{
+		ft_putstr_c("(null)", ptr_sum);
+		return ;
+	}
+	while (*s)
+	{
+		write(1, s++, 1);
+		*ptr_sum += 1;
+	}
 }

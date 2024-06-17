@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 10:36:09 by mbartos           #+#    #+#             */
-/*   Updated: 2024/06/17 10:24:19 by mbartos          ###   ########.fr       */
+/*   Created: 2023/10/31 14:33:33 by mbartos           #+#    #+#             */
+/*   Updated: 2023/11/01 13:34:51 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_puthexa(unsigned int number, char hex_base, int *ptr_sum)
 {
-	int	i;
+	char			base[17];
 
-	i = 0;
-	if (s == NULL)
-		return (0);
-	while (s[i] != 0)
-		i++;
-	return (i);
+	if (hex_base == 'h')
+		ft_strlcpy(base, "0123456789abcdef", 17);
+	else if (hex_base == 'H')
+		ft_strlcpy(base, "0123456789ABCDEF", 17);
+	if (number > 15)
+	{
+		ft_puthexa(number / 16, hex_base, ptr_sum);
+		ft_puthexa(number % 16, hex_base, ptr_sum);
+	}
+	else
+		ft_putchar_c(base[number], ptr_sum);
 }

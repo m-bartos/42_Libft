@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 10:36:09 by mbartos           #+#    #+#             */
-/*   Updated: 2024/06/17 10:24:19 by mbartos          ###   ########.fr       */
+/*   Created: 2023/10/25 14:05:19 by mbartos           #+#    #+#             */
+/*   Updated: 2023/11/01 09:29:39 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_putnbr_c(int n, int *ptr_sum)
 {
-	int	i;
+	long int	n_long;
 
-	i = 0;
-	if (s == NULL)
-		return (0);
-	while (s[i] != 0)
-		i++;
-	return (i);
+	n_long = n;
+	if (n_long < 0)
+	{
+		n_long = -n_long;
+		ft_putchar_c('-', ptr_sum);
+	}
+	if (n_long > 9)
+	{
+		ft_putnbr_c(n_long / 10, ptr_sum);
+		ft_putnbr_c(n_long % 10, ptr_sum);
+	}
+	else
+		ft_putchar_c(n_long + '0', ptr_sum);
 }
