@@ -59,6 +59,7 @@ SOURCES =	ft_atoi.c \
 			ft_lstmap.c \
 			\
 			ft_array_utils.c \
+			ft_array_utils2.c \
 			\
 			ft_itoa_e.c \
 			ft_split_e.c \

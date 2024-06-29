@@ -6,7 +6,7 @@
 /*   By: mbartos <mbartos@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:02:38 by mbartos           #+#    #+#             */
-/*   Updated: 2024/06/27 22:00:30 by mbartos          ###   ########.fr       */
+/*   Updated: 2024/06/29 14:38:33 by mbartos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,9 @@ char	*ft_arr_to_str(char **arr_of_strs);
 char	**ft_init_array(int size);
 void	ft_free_array(char **arr_of_str);
 void	ft_print_array(char **arr);
+
+// ft_array_utils2.c
+char	**ft_arrdup(char **arr);
 
 char	**ft_split_empty(char const *s, char c);
 #endif
